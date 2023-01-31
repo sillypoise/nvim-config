@@ -8,6 +8,8 @@ local status_3, lspkind = pcall(require, "lspkind")
 if (not status_3) then error(ERROR_MSG) end
 local status_4, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
 if (not status_4) then error(ERROR_MSG) end
+local status_5, cmp_autopairs = pcall(require, "nvim-autopairs.completion.cmp")
+if (not status_5) then return end
 
 
 cmp.setup {
@@ -20,6 +22,7 @@ cmp.setup {
         ['<C-d>'] = cmp.mapping.scroll_docs(-4),
         ['<C-f>'] = cmp.mapping.scroll_docs(4),
         ['<C-Space>'] = cmp.mapping.complete(),
+        ['<C-e>'] = cmp.mapping.abort(),
         ['<CR>'] = cmp.mapping.confirm {
             behavior = cmp.ConfirmBehavior.Replace,
             select = true,
@@ -47,6 +50,11 @@ cmp.setup {
         })
     },
 }
+
+cmp.event:on(
+    'confirm_done',
+    cmp_autopairs.on_confirm_done()
+)
 
 -- vim.cmd [[
 --   set completeopt=menuone,noinsert,noselect

@@ -12,13 +12,19 @@ local status_5, lspconfig = pcall(require, "lspconfig")
 if (not status_5) then error(ERROR_MSG) end
 local status_6, lspsaga = pcall(require, "lspsaga")
 if (not status_6) then error(ERROR_MSG) end
+local status_7, fidget = pcall(require, "fidget")
+if (not status_7) then error(ERROR_MSG) end
 
 -- Define mappings for when an LSP gets attached to a Buffer
 
--- setup Lspsaga before defining mappings
+-- Setup Lspsaga before defining mappings
 lspsaga.setup()
+
 -- Setup neovim lua configuration
 neodev.setup();
+
+-- Turn on lsp status information
+fidget.setup()
 
 local on_attach = function(_, bufnr)
     -- NOTE: Remember that lua is a real programming language, and as such it is possible
