@@ -11,10 +11,10 @@ end
 
 require('packer').startup(function(use)
 
-    -- Package manager
+    -- [[ Package Manager ]]
     use 'wbthomason/packer.nvim'
 
-    -- LSP
+    -- [[ LSP ]]
     use {
         'neovim/nvim-lspconfig',
         requires = {
@@ -30,10 +30,9 @@ require('packer').startup(function(use)
             -- creates missing LSP diagnostics highlight groups for unsupported color schemes
             use "folke/lsp-colors.nvim",
         },
-
     }
 
-    -- Autocompletion
+    -- [[ Autocompletion ]]
 
     use {
         'hrsh7th/nvim-cmp',
@@ -53,7 +52,7 @@ require('packer').startup(function(use)
         }
     }
 
-    -- Treesitter
+    -- [[ Treesitter ]]
 
     use {
         'nvim-treesitter/nvim-treesitter',
@@ -74,7 +73,16 @@ require('packer').startup(function(use)
     -- Use treesitter to autoclose and autorename html tag
     use 'windwp/nvim-ts-autotag'
 
-    -- Appereance
+    -- [[ Telescope ]]
+    use { 'nvim-telescope/telescope.nvim', branch = '0.1.x', requires = { 'nvim-lua/plenary.nvim' } }
+
+    -- fuzzy Finder Algorithm which requires local dependencies to be built. Only load if `make` is available
+    use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make', cond = vim.fn.executable 'make' == 1 }
+
+    -- Telescope file browser
+    use { "nvim-telescope/telescope-file-browser.nvim" }
+
+    -- [[ Appereance ]]
 
     -- lsp UIs
     use "glepnir/lspsaga.nvim"
