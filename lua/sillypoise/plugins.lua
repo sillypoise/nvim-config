@@ -21,21 +21,14 @@ require('packer').startup(function(use)
             -- LSP Support
             'williamboman/mason.nvim',
             'williamboman/mason-lspconfig.nvim',
-
             -- Useful status updates for LSP
             'j-hui/fidget.nvim',
-
             -- Additional lua configuration, makes nvim stuff amazing
             'folke/neodev.nvim',
-
             -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
             use 'jose-elias-alvarez/null-ls.nvim',
             -- creates missing LSP diagnostics highlight groups for unsupported color schemes
             use "folke/lsp-colors.nvim",
-            -- LSP UIs
-            use "glepnir/lspsaga.nvim",
-            -- vscode-like pictograms
-            use "onsails/lspkind.nvim"
         },
 
     }
@@ -53,7 +46,6 @@ require('packer').startup(function(use)
             { 'hrsh7th/cmp-nvim-lua' }, -- Optional,
 
             -- Snippets
-            -- Snippets
             { 'L3MON4D3/LuaSnip' }, -- Required
             { 'rafamadriz/friendly-snippets' }, -- Optional
         }
@@ -61,9 +53,19 @@ require('packer').startup(function(use)
 
 
     -- Appereance
-    use 'shaunsingh/nord.nvim' -- Nord Theme
 
+    -- LSP UIs
+    use "glepnir/lspsaga.nvim"
+    -- vscode-like pictograms
+    use "onsails/lspkind.nvim"
+    -- Adds file type icons to plugins
+    use 'nvim-tree/nvim-web-devicons'
+    -- Nord Theme
+    use 'shaunsingh/nord.nvim'
     -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
+
+
+
     local has_plugins, plugins = pcall(require, 'custom.plugins')
 
     if has_plugins then
