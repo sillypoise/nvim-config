@@ -1,3 +1,6 @@
 # sillypoise's init.lua
 
-Prerequisite: install [ripgrep](https://github.com/BurntSushi/ripgrep)
+Prerequisites:
+
+    - install [ripgrep](https://github.com/BurntSushi/ripgrep)
+    - install [win32yank](https://github.com/equalsraf/win32yank)

@@ -1,2 +1,1 @@
-require("sillypoise")
-print("hello")
+require ('sillypoise.base')
