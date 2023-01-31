@@ -1,10 +1,6 @@
 -- [[ Set Vim Options ]]
 -- See `:help vim.o`
 
-
--- Check if we're in WSL
-local in_wsl = os.getenv('WSL_DISTRO_NAME') ~= nil
-
 -- vim.cmd("autocmd!")
 
 vim.scriptencoding = 'utf-8'
@@ -54,17 +50,6 @@ vim.opt.wrap = false
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
 
- -- Finding files - Search down into subfolders
+-- Finding files - Search down into subfolders
 vim.opt.path:append { '**' }
 vim.opt.wildignore:append { '*/node_modules/*' }
-
--- Set WSL clipboard support
-if in_wsl then
-  vim.cmd("set clipboard=unnamedplus")
---   vim.g.clipboard = {
---       name = 'wsl clipboard',
---       copy =  { ["+"] = { "win32yank.exe" },   ["*"] = { "win32yank.exe" } },
---       paste = { ["+"] = { "nvim_paste" }, ["*"] = { "nvim_paste" } },
---       cache_enabled = true
---   }
-end
