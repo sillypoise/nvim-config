@@ -1,6 +1,7 @@
 require('sillypoise.base')
 require('sillypoise.highlights')
 require('sillypoise.maps')
+require('sillypoise.plugins')
 
 
 local has = vim.fn.has
