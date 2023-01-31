@@ -289,6 +289,11 @@ _G.packer_plugins = {
     path = "/home/sillypoise/.local/share/nvim/site/pack/packer/start/vim-sleuth",
     url = "https://github.com/tpope/vim-sleuth"
   },
+  ["vim-tmux-navigator"] = {
+    loaded = true,
+    path = "/home/sillypoise/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",
+    url = "https://github.com/christoomey/vim-tmux-navigator"
+  },
   ["zen-mode.nvim"] = {
     loaded = true,
     path = "/home/sillypoise/.local/share/nvim/site/pack/packer/start/zen-mode.nvim",

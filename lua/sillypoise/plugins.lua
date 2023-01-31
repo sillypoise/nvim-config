@@ -98,6 +98,8 @@ require('packer').startup(function(use)
     use "mbbill/undotree"
     -- harpoon
     use "theprimeagen/harpoon"
+    -- tmux Navigation
+    use 'christoomey/vim-tmux-navigator';
 
     --* [[ Appereance ]]
     -- lsp UIs
