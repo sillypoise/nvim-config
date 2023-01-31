@@ -18,7 +18,7 @@ require('packer').startup(function(use)
     use {
         'neovim/nvim-lspconfig',
         requires = {
-            -- Automatically install LSPs to stdpath for neovim
+            -- LSP Support
             'williamboman/mason.nvim',
             'williamboman/mason-lspconfig.nvim',
 
@@ -40,10 +40,28 @@ require('packer').startup(function(use)
 
     }
 
-    -- Appereance
-    use 'shaunsingh/nord.nvim' -- Nord Theme
 
     -- Autocompletion
+
+    use {
+        'hrsh7th/nvim-cmp',
+        requires = {
+            { 'hrsh7th/cmp-nvim-lsp' }, -- Required
+            { 'hrsh7th/cmp-buffer' }, -- Optional
+            { 'hrsh7th/cmp-path' }, -- Optional
+            { 'saadparwaiz1/cmp_luasnip' }, -- Optional
+            { 'hrsh7th/cmp-nvim-lua' }, -- Optional,
+
+            -- Snippets
+            -- Snippets
+            { 'L3MON4D3/LuaSnip' }, -- Required
+            { 'rafamadriz/friendly-snippets' }, -- Optional
+        }
+    }
+
+
+    -- Appereance
+    use 'shaunsingh/nord.nvim' -- Nord Theme
 
     -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
     local has_plugins, plugins = pcall(require, 'custom.plugins')

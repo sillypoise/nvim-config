@@ -1,15 +1,19 @@
-local status, mason = pcall(require, "mason")
-if (not status) then return end
+local ERROR_MSG = "package missing"
+
+local status_1, mason = pcall(require, "mason")
+if (not status_1) then error(ERROR_MSG) end
 local status_2, m_lspconfig = pcall(require, "mason-lspconfig")
-if (not status_2) then return end
+if (not status_2) then error(ERROR_MSG) end
 local status_3, neodev = pcall(require, "neodev")
-if (not status_3) then return end
+if (not status_3) then print(ERROR_MSG) end
 local status_4, cmp_nvim_lsp = pcall(require, "cmp_nvim_lsp")
-if (not status_4) then return end
+if (not status_4) then error(ERROR_MSG) end
 local status_5, lspconfig = pcall(require, "lspconfig")
-if (not status_5) then return end
+if (not status_5) then error(ERROR_MSG) end
 local status_6, lspsaga = pcall(require, "lspsaga")
-if (not status_6) then return end
+if (not status_6) then error(ERROR_MSG) end
+
+print("⏱️...Setting up LSP configuration")
 
 -- Define mappings for when an LSP gets attached to a Buffer
 
@@ -113,7 +117,7 @@ local servers = {
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities = cmp_nvim_lsp.default_capabilities(capabilities)
 
-mason.setup({})
+mason.setup()
 
 m_lspconfig.setup {
     ensure_installed = vim.tbl_keys(servers),
