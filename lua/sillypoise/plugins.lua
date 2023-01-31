@@ -72,12 +72,19 @@ require('packer').startup(function(use)
     use 'windwp/nvim-ts-autotag'
 
     --* [[ Telescope ]]
-    --
     use { 'nvim-telescope/telescope.nvim', branch = '0.1.x', requires = { 'nvim-lua/plenary.nvim' } }
     -- fuzzy Finder Algorithm which requires local dependencies to be built. Only load if `make` is available
     use { 'nvim-telescope/telescope-fzf-native.nvim', run = 'make', cond = vim.fn.executable 'make' == 1 }
     -- Telescope file browser
     use { "nvim-telescope/telescope-file-browser.nvim" }
+
+    --* [[ Git ]]
+    use 'tpope/vim-fugitive'
+    use 'tpope/vim-rhubarb'
+    -- visualize diffs in buf
+    use 'lewis6991/gitsigns.nvim'
+    -- for git blame & browse
+    use 'dinhhuy258/git.nvim'
 
     --* [[ Editor ]]
     -- diagnostics UI
