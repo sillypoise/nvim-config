@@ -13,8 +13,6 @@ if (not status_5) then error(ERROR_MSG) end
 local status_6, lspsaga = pcall(require, "lspsaga")
 if (not status_6) then error(ERROR_MSG) end
 
-print("⏱️...Setting up LSP configuration")
-
 -- Define mappings for when an LSP gets attached to a Buffer
 
 -- setup Lspsaga before defining mappings
