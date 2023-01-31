@@ -18,13 +18,20 @@ if (not status_7) then error(ERROR_MSG) end
 -- Define mappings for when an LSP gets attached to a Buffer
 
 -- Setup Lspsaga before defining mappings
-lspsaga.setup()
+lspsaga.setup(
+    {
+        ui = {
+            winblend = 10,
+            border = 'rounded',
+            colors = {
+                normal_bg = '#002b36'
+            }
+        }
+    }
+)
 
 -- Setup neovim lua configuration
 neodev.setup();
-
--- Turn on lsp status information
-fidget.setup()
 
 local on_attach = function(_, bufnr)
     -- NOTE: Remember that lua is a real programming language, and as such it is possible
@@ -49,11 +56,11 @@ local on_attach = function(_, bufnr)
     -- nmap('<leader>rn', vim.lsp.buf.rename, '[R]e[n]ame')
 
     -- Actions
-    nmap('<leader>rn', vim.cmd("Lspsaga rename"), '[R]e[n]ame')
-    nmap('<leader>ca', vim.cmd("Lspsaga code_action"), '[C]ode [A]ction')
+    nmap('<leader>rn', "<cmd> Lspsaga rename<CR>", '[R]e[n]ame')
+    nmap('<leader>ca', "<cmd>Lspsaga code_action<CR>", '[C]ode [A]ction')
 
     -- Documents, Definitions and Signatures
-    nmap('gd', vim.cmd("Lspsaga peek_definition"), '[G]oto [D]efinition')
+    nmap('gd', "<cmd>Lspsaga peek_definition<CR>", '[G]oto [D]efinition')
     nmap('gI', vim.lsp.buf.implementation, '[G]oto [I]mplementation')
     nmap('<leader>D', vim.lsp.buf.type_definition, 'Type [D]efinition')
     -- *? requires telescope
@@ -61,22 +68,22 @@ local on_attach = function(_, bufnr)
     -- *? requires telescope
     -- nmap('<leader>ds', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
     nmap('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
-    -- * disabled: clashes with windo split mapping
+    -- * disabled: clashes with window mappings
     -- nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
-    -- * disabled: clashes with windo split mapping
+    -- * disabled: clashes with window mappings
     -- nmap('<leader>wa', vim.lsp.buf.add_workspace_folder, '[W]orkspace [A]dd Folder')
-    -- * disabled: clashes with windo split mapping
+    -- * disabled: clashes with window mappings
     -- nmap('<leader>wr', vim.lsp.buf.remove_workspace_folder, '[W]orkspace [R]emove Folder')
-    -- * disabled: clashes with windo split mapping
+    -- * disabled: clashes with window mappings
     -- nmap('<leader>wl', function()
     --     print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
     -- end, '[W]orkspace [L]ist Folders')
 
     -- Diagnostics
-    nmap('[d', vim.cmd("Lspsaga diagnostic_jump_prev"), 'Jump to previous diagnostic')
-    nmap(']d', vim.cmd("Lspsaga diagnostic_jump_next"), 'Jump to next diagnostic')
-    nmap('<leader>e', vim.cmd("Lspsaga show_line_diagnostics"), 'Show line diagnostic')
-    nmap('K', vim.cmd("Lspsaga hover_doc"), 'Hover Documentation')
+    nmap('[d', ("<cmd>Lspsaga diagnostic_jump_prev<CR>"), 'Jump to previous diagnostic')
+    nmap(']d', ("<cmd>Lspsaga diagnostic_jump_next<CR>"), 'Jump to next diagnostic')
+    nmap('<leader>e', ("<cmd>Lspsaga show_line_diagnostics<CR>"), 'Show line diagnostic')
+    nmap('K', ("<cmd>Lspsaga hover_doc<CR>"), 'Hover Documentation')
     -- * disabled: clashes with tmux+nvim navigation
     -- nmap('<C-k>', "<cmd>Lspsaga signature_help<CR>", 'Signature Documentation')
 
@@ -137,4 +144,6 @@ m_lspconfig.setup_handlers {
     end,
 }
 
--- require('fidget').setup()
+
+-- Turn on lsp status information
+fidget.setup()
