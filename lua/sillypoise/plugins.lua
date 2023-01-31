@@ -79,6 +79,19 @@ require('packer').startup(function(use)
     -- Telescope file browser
     use { "nvim-telescope/telescope-file-browser.nvim" }
 
+    --* [[ Editor ]]
+    -- diagnostics UI
+    use 'folke/trouble.nvim'
+    -- commenting functionality
+    use 'numToStr/Comment.nvim'
+    -- ddd indentation guides even on blank lines
+    use 'lukas-reineke/indent-blankline.nvim' -- detect tabstop and shiftwidth automatically
+    use 'tpope/vim-sleuth'
+    -- undo tree
+    use "mbbill/undotree"
+    -- harpoon
+    use "theprimeagen/harpoon"
+
     --* [[ Appereance ]]
     -- lsp UIs
     use "glepnir/lspsaga.nvim"
@@ -86,10 +99,19 @@ require('packer').startup(function(use)
     use "onsails/lspkind.nvim"
     -- adds file type icons to plugins
     use 'nvim-tree/nvim-web-devicons'
-    -- nord Theme
-    use 'shaunsingh/nord.nvim'
     -- highlights color definitions
     use "norcalli/nvim-colorizer.lua"
+    -- zen mode
+    use 'folke/zen-mode.nvim'
+    -- dim lines for zen mode
+    use 'folke/twilight.nvim'
+
+    --* themes
+    -- atom
+    use 'navarasu/onedark.nvim'
+    -- nord
+    use 'shaunsingh/nord.nvim'
+
     -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
     local has_plugins, plugins = pcall(require, 'custom.plugins')
 
