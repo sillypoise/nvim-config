@@ -12,7 +12,7 @@ vim.keymap.set('n', 'k', "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = tr
 vim.keymap.set('n', 'j', "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true })
 
 -- Swap ; with space (e.g. next occurence)
--- vim.keymap.set('n', '<Space>', ';')
+vim.keymap.set('n', '<Space>', ';')
 
 -- Centered vertical page movment
 vim.keymap.set('n', '<C-d>', '<C-d>zz')

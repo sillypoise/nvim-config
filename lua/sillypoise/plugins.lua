@@ -33,7 +33,6 @@ require('packer').startup(function(use)
 
     }
 
-
     -- Autocompletion
 
     use {
@@ -54,21 +53,39 @@ require('packer').startup(function(use)
         }
     }
 
+    -- Treesitter
+
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = function()
+            pcall(require('nvim-treesitter.install').update {
+                with_sync = true
+            })
+        end
+    }
+    -- additiona text objects via treesitter
+    use {
+
+        'nvim-treesitter/nvim-treesitter-textobjects',
+        after = 'nvim-treesitter',
+    }
+    -- treesitter Playground
+    use 'nvim-treesitter/playground'
+    -- Use treesitter to autoclose and autorename html tag
+    use 'windwp/nvim-ts-autotag'
 
     -- Appereance
 
-    -- LSP UIs
+    -- lsp UIs
     use "glepnir/lspsaga.nvim"
     -- vscode-like pictograms
     use "onsails/lspkind.nvim"
-    -- Adds file type icons to plugins
+    -- adds file type icons to plugins
     use 'nvim-tree/nvim-web-devicons'
-    -- Nord Theme
+    -- nord Theme
     use 'shaunsingh/nord.nvim'
+
     -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
-
-
-
     local has_plugins, plugins = pcall(require, 'custom.plugins')
 
     if has_plugins then
