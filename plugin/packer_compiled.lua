@@ -74,6 +74,56 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["fidget.nvim"] = {
+    loaded = true,
+    path = "/home/sillypoise/.local/share/nvim/site/pack/packer/start/fidget.nvim",
+    url = "https://github.com/j-hui/fidget.nvim"
+  },
+  ["lsp-colors.nvim"] = {
+    loaded = true,
+    path = "/home/sillypoise/.local/share/nvim/site/pack/packer/start/lsp-colors.nvim",
+    url = "https://github.com/folke/lsp-colors.nvim"
+  },
+  ["lspkind.nvim"] = {
+    loaded = true,
+    path = "/home/sillypoise/.local/share/nvim/site/pack/packer/start/lspkind.nvim",
+    url = "https://github.com/onsails/lspkind.nvim"
+  },
+  ["lspsaga.nvim"] = {
+    loaded = true,
+    path = "/home/sillypoise/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
+    url = "https://github.com/glepnir/lspsaga.nvim"
+  },
+  ["mason-lspconfig.nvim"] = {
+    loaded = true,
+    path = "/home/sillypoise/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
+    url = "https://github.com/williamboman/mason-lspconfig.nvim"
+  },
+  ["mason.nvim"] = {
+    loaded = true,
+    path = "/home/sillypoise/.local/share/nvim/site/pack/packer/start/mason.nvim",
+    url = "https://github.com/williamboman/mason.nvim"
+  },
+  ["neodev.nvim"] = {
+    loaded = true,
+    path = "/home/sillypoise/.local/share/nvim/site/pack/packer/start/neodev.nvim",
+    url = "https://github.com/folke/neodev.nvim"
+  },
+  ["nord.nvim"] = {
+    loaded = true,
+    path = "/home/sillypoise/.local/share/nvim/site/pack/packer/start/nord.nvim",
+    url = "https://github.com/shaunsingh/nord.nvim"
+  },
+  ["null-ls.nvim"] = {
+    loaded = true,
+    path = "/home/sillypoise/.local/share/nvim/site/pack/packer/start/null-ls.nvim",
+    url = "https://github.com/jose-elias-alvarez/null-ls.nvim"
+  },
+  ["nvim-lspconfig"] = {
+    loaded = true,
+    path = "/home/sillypoise/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    url = "https://github.com/neovim/nvim-lspconfig"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/sillypoise/.local/share/nvim/site/pack/packer/start/packer.nvim",

@@ -29,9 +29,21 @@ require('packer').startup(function(use)
             'folke/neodev.nvim',
 
             -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
-            use 'jose-elias-alvarez/null-ls.nvim'
+            use 'jose-elias-alvarez/null-ls.nvim',
+            -- creates missing LSP diagnostics highlight groups for unsupported color schemes
+            use "folke/lsp-colors.nvim",
+            -- LSP UIs
+            use "glepnir/lspsaga.nvim",
+            -- vscode-like pictograms
+            use "onsails/lspkind.nvim"
         },
+
     }
+
+    -- Appereance
+    use 'shaunsingh/nord.nvim' -- Nord Theme
+
+    -- Autocompletion
 
     -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
     local has_plugins, plugins = pcall(require, 'custom.plugins')
@@ -60,3 +72,12 @@ if is_bootstrap then
 
     return
 end
+
+-- Automatically source and re-compile packer whenever you save this init.lua
+local packer_group = vim.api.nvim_create_augroup('Packer', { clear = true })
+vim.api.nvim_create_autocmd('BufWritePost', {
+    command = 'source <afile> | silent! LspStop | silent! LspStart | PackerCompile',
+    group = packer_group,
+
+    pattern = vim.fn.expand '$MYVIMRC',
+})
