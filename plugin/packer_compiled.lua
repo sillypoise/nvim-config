@@ -289,6 +289,11 @@ _G.packer_plugins = {
     path = "/home/sillypoise/.local/share/nvim/site/pack/packer/start/undotree",
     url = "https://github.com/mbbill/undotree"
   },
+  ["vim-eunuch"] = {
+    loaded = true,
+    path = "/home/sillypoise/.local/share/nvim/site/pack/packer/start/vim-eunuch",
+    url = "https://github.com/tpope/vim-eunuch"
+  },
   ["vim-fugitive"] = {
     loaded = true,
     path = "/home/sillypoise/.local/share/nvim/site/pack/packer/start/vim-fugitive",

@@ -92,8 +92,11 @@ require('packer').startup(function(use)
     -- commenting functionality
     use 'numToStr/Comment.nvim'
     -- indentation guides even on blank lines
-    use 'lukas-reineke/indent-blankline.nvim' -- detect tabstop and shiftwidth automatically
+    use 'lukas-reineke/indent-blankline.nvim'
+    -- detect tabstop and shiftwidth automatically
     use 'tpope/vim-sleuth'
+    -- vim sugar for unix shell commands
+    use 'tpope/vim-eunuch'
     -- undo tree
     use "mbbill/undotree"
     -- harpoon
