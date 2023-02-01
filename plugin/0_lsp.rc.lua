@@ -33,7 +33,7 @@ lspsaga.setup(
 -- Setup neovim lua configuration
 neodev.setup();
 
-local on_attach = function(_, bufnr)
+local on_attach = function(client, bufnr)
     -- NOTE: Remember that lua is a real programming language, and as such it is possible
     -- to define small helper and utility functions so you don't have to repeat yourself many times.
     -- In this case, we create a function that lets us more easily define mappings specific
@@ -112,7 +112,6 @@ local servers = {
         cmd = { "typescript-language-server", "--stdio" },
     },
     eslint = {},
-
     sumneko_lua = {
         Lua = {
             workspace = { checkThirdParty = false },
@@ -120,9 +119,6 @@ local servers = {
         },
     },
 }
-
-
-
 
 -- nvim-cmp supports additional completion capabilities, so broadcast that to servers
 local capabilities = vim.lsp.protocol.make_client_capabilities()

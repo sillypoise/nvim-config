@@ -1,9 +1,8 @@
-local status, fugitive = pcall(require, "fugitive")
-if (not status) then return end
+vim.keymap.set("n", "<leader>gs", vim.cmd.Git);
 
-fugitive.setup()
 
-local sillypoise_fugitive = vim.api.nvim_create_augroup("ThePrimeagen_Fugitive", {})
+local sillypoise_fugitive = vim.api.nvim_create_augroup("sillypoise_fugitive", {})
+
 
 local autocmd = vim.api.nvim_create_autocmd
 autocmd("BufWinEnter", {
@@ -13,6 +12,7 @@ autocmd("BufWinEnter", {
         if vim.bo.ft ~= "fugitive" then
             return
         end
+        vim.keymap.set("n", "<leader>gs", '<cmd>:G<CR>');
 
         local bufnr = vim.api.nvim_get_current_buf()
         local opts = { buffer = bufnr, remap = false }

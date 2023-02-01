@@ -83,8 +83,6 @@ require('packer').startup(function(use)
     use 'tpope/vim-rhubarb'
     -- visualize diffs in buf
     use 'lewis6991/gitsigns.nvim'
-    -- for git blame & browse
-    use 'dinhhuy258/git.nvim'
 
     --* [[ Editor ]]
     -- diagnostics UI
