@@ -28,7 +28,7 @@ require('packer').startup(function(use)
             -- Use Neovim as a language server to inject LSP diagnostics, code actions, and more via Lua
             use 'jose-elias-alvarez/null-ls.nvim',
             -- creates missing LSP diagnostics highlight groups for unsupported color schemes
-            use "folke/lsp-colors.nvim",
+            use "folke/lsp-colors.nvim"
         },
     }
 
@@ -47,7 +47,7 @@ require('packer').startup(function(use)
             { 'rafamadriz/friendly-snippets' }, -- Optional
 
             -- Other
-            use 'windwp/nvim-autopairs' -- Optional
+            use 'windwp/nvim-autopairs', -- Optional
         }
     }
 
@@ -60,7 +60,7 @@ require('packer').startup(function(use)
             })
         end
     }
-    -- additiona text objects via treesitter
+    -- additional text objects via treesitter
     use {
 
         'nvim-treesitter/nvim-treesitter-textobjects',
@@ -118,11 +118,13 @@ require('packer').startup(function(use)
     -- dim lines for zen mode
     use 'folke/twilight.nvim'
 
-    --* themes
+    --* [[ Themes ]]
     -- atom
     use 'navarasu/onedark.nvim'
     -- nord
     use 'shaunsingh/nord.nvim'
+    -- github
+    use 'projekt0n/github-nvim-theme'
 
     -- Add custom plugins to packer from ~/.config/nvim/lua/custom/plugins.lua
     local has_plugins, plugins = pcall(require, 'custom.plugins')
