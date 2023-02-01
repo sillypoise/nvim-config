@@ -129,6 +129,11 @@ _G.packer_plugins = {
     path = "/home/sillypoise/.local/share/nvim/site/pack/packer/start/harpoon",
     url = "https://github.com/theprimeagen/harpoon"
   },
+  ["heirline.nvim"] = {
+    loaded = true,
+    path = "/home/sillypoise/.local/share/nvim/site/pack/packer/start/heirline.nvim",
+    url = "https://github.com/rebelot/heirline.nvim"
+  },
   ["indent-blankline.nvim"] = {
     loaded = true,
     path = "/home/sillypoise/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
@@ -148,6 +153,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/sillypoise/.local/share/nvim/site/pack/packer/start/lspsaga.nvim",
     url = "https://github.com/glepnir/lspsaga.nvim"
+  },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/home/sillypoise/.local/share/nvim/site/pack/packer/start/lualine.nvim",
+    url = "https://github.com/nvim-lualine/lualine.nvim"
   },
   ["mason-lspconfig.nvim"] = {
     loaded = true,

@@ -89,7 +89,7 @@ require('packer').startup(function(use)
     use 'folke/trouble.nvim'
     -- commenting functionality
     use 'numToStr/Comment.nvim'
-    -- ddd indentation guides even on blank lines
+    -- indentation guides even on blank lines
     use 'lukas-reineke/indent-blankline.nvim' -- detect tabstop and shiftwidth automatically
     use 'tpope/vim-sleuth'
     -- undo tree
@@ -100,6 +100,9 @@ require('packer').startup(function(use)
     use 'christoomey/vim-tmux-navigator';
 
     --* [[ Appereance ]]
+    -- status line
+    use 'rebelot/heirline.nvim'
+    use 'nvim-lualine/lualine.nvim'
     -- lsp UIs
     use "glepnir/lspsaga.nvim"
     -- vscode-like pictograms
