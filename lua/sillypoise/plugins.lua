@@ -85,6 +85,8 @@ require('packer').startup(function(use)
     use 'lewis6991/gitsigns.nvim'
 
     --* [[ Editor ]]
+    --nvim tree
+    use 'nvim-tree/nvim-tree.lua'
     -- diagnostics UI
     use 'folke/trouble.nvim'
     -- commenting functionality

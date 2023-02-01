@@ -46,6 +46,10 @@ vim.wo.signcolumn = 'yes'
 -- No Wrap lines
 vim.opt.wrap = false
 
+-- Disable netrw
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
