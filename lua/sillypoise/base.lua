@@ -50,6 +50,9 @@ vim.opt.wrap = false
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
+-- Open Split on Right
+vim.opt.splitright = true
+
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'

@@ -3,7 +3,13 @@ if (not status_1) then return end
 local status_2, gh_theme = pcall(require, "github-theme")
 if (not status_2) then print("errro") end
 
+
+
 -- nord.set()
 gh_theme.setup({
-    theme_style = "dark"
+    theme_style = "dark",
+    -- transparent = true,
+    sidebars = {"nvim-tree"},
+    dark_sidebar = true
 })
+
