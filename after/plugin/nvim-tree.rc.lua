@@ -20,7 +20,4 @@ nvim_tree.setup({
     renderer = {
         group_empty = true,
     },
-    filters = {
-        dotfiles = true,
-    },
 })
