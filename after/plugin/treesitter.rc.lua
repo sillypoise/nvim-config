@@ -46,6 +46,13 @@ ts.setup {
     autotag = {
         enable = true,
     },
+    context_commentstring = {
+        enable = true,
+        enable_autocmd = false,
+        -- config = {
+        --     typescript = { __default = '// %s', __multiline = '/* %s */' }
+        -- }
+    },
     incremental_selection = {
         enable = true,
         keymaps = {

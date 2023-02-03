@@ -68,8 +68,10 @@ require('packer').startup(function(use)
     }
     -- treesitter Playground
     use 'nvim-treesitter/playground'
-    -- Use treesitter to autoclose and autorename html tag
+    -- use treesitter to autoclose and autorename html tag
     use 'windwp/nvim-ts-autotag'
+    -- treesitter-context aware commenting
+    use 'JoosepAlviste/nvim-ts-context-commentstring'
 
     --* [[ Telescope ]]
     use { 'nvim-telescope/telescope.nvim', branch = '0.1.x', requires = { 'nvim-lua/plenary.nvim' } }
