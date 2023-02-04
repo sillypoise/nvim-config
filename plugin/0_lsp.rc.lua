@@ -63,10 +63,8 @@ local on_attach = function(client, bufnr)
     nmap('gd', "<cmd>Lspsaga peek_definition<CR>", '[G]oto [D]efinition')
     nmap('gI', vim.lsp.buf.implementation, '[G]oto [I]mplementation')
     nmap('<leader>D', vim.lsp.buf.type_definition, 'Type [D]efinition')
-    -- *? requires telescope
-    -- nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
-    -- *? requires telescope
-    -- nmap('<leader>ds', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
+    nmap('gr', require('telescope.builtin').lsp_references, '[G]oto [R]eferences')
+    nmap('<leader>ds', require('telescope.builtin').lsp_document_symbols, '[D]ocument [S]ymbols')
     nmap('gD', vim.lsp.buf.declaration, '[G]oto [D]eclaration')
     -- * disabled: clashes with window mappings
     -- nmap('<leader>ws', require('telescope.builtin').lsp_dynamic_workspace_symbols, '[W]orkspace [S]ymbols')
