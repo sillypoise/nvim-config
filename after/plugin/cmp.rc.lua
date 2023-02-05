@@ -29,6 +29,8 @@ local function format_for_tailwind_css(entry, vim_item)
     return vim_item
 end
 
+require("luasnip.loaders.from_vscode").lazy_load()
+
 cmp.setup {
     snippet = {
         expand = function(args)
