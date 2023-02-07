@@ -58,7 +58,7 @@ ts.setup {
         keymaps = {
             init_selection = '<c-i>',
             node_incremental = '<c-i>',
-            scope_incremental = '<Tab>',
+            scope_incremental = '<c-I>',
             node_decremental = '<c-l>',
         },
     },

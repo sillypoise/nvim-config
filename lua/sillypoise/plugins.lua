@@ -87,6 +87,8 @@ require('packer').startup(function(use)
     use 'lewis6991/gitsigns.nvim'
 
     --* [[ Editor ]]
+    -- github copilot
+    use 'github/copilot.vim'
     --nvim tree
     use 'nvim-tree/nvim-tree.lua'
     -- diagnostics UI
