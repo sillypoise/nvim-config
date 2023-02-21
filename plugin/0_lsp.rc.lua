@@ -110,7 +110,7 @@ local servers = {
         cmd = { "typescript-language-server", "--stdio" },
     },
     eslint = {},
-    sumneko_lua = {
+    lua_ls = {
         Lua = {
             workspace = { checkThirdParty = false },
             telemetry = { enable = false },
