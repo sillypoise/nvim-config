@@ -1,8 +1,7 @@
 require('sillypoise.base')
 require('sillypoise.highlights')
 require('sillypoise.maps')
-require('sillypoise.plugins')
-
+require('sillypoise.lazy')
 
 local has = vim.fn.has
 local is_mac = has "macunix"

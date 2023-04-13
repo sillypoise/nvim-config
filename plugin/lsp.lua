@@ -42,11 +42,9 @@ local on_attach = function(client, bufnr)
     local nmap = function(keys, func, desc)
         if desc then
             desc = 'LSP: ' .. desc
-
         end
 
         vim.keymap.set('n', keys, func, { buffer = bufnr, desc = desc })
-
     end
 
     -- Mappings
@@ -90,7 +88,6 @@ local on_attach = function(client, bufnr)
         vim.lsp.buf.format()
     end, { desc = 'Format current buffer with LSP' })
     nmap('<leader>F', ':Format<CR>', '[F]ormat')
-
 end
 
 
