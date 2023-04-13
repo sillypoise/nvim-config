@@ -37,3 +37,9 @@ vim.keymap.set('n', '<leader>wq', '<C-w>q')
 vim.keymap.set('n', '<leader>wr', '<C-w>r')
 vim.keymap.set('n', '<leader>w+', '<C-w>+', { noremap = false })
 vim.keymap.set('n', '<leader>w-', '<C-w>-', { noremap = false })
+
+-- Copilot
+-- disable
+vim.keymap.set('n', '<leader>dc', ':CopilotDisable<CR>')
+-- enable
+vim.keymap.set('n', '<leader>ec', ':CopilotEnable<CR>')

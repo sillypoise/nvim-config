@@ -8,6 +8,7 @@ ts.setup {
     ensure_installed = {
         "astro",
         "c",
+        "cpp",
         "css",
         "diff",
         "dockerfile",
@@ -19,6 +20,7 @@ ts.setup {
         "hcl",
         "html",
         "help",
+        "java",
         "javascript",
         "json",
         "latex",
