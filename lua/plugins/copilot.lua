@@ -3,8 +3,8 @@ return {
     'github/copilot.vim',
     config = function()
         -- disable
-        vim.keymap.set('n', '<leader>dc', ':CopilotDisable<CR>')
+        vim.keymap.set('n', '<leader>dc', ':Copilot disable<CR>')
         -- enable
-        vim.keymap.set('n', '<leader>ec', ':CopilotEnable<CR>')
+        vim.keymap.set('n', '<leader>ec', ':Copilot enable<CR>')
     end
 }
