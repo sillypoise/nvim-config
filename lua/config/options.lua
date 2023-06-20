@@ -1,11 +1,12 @@
--- [[ Set Vim Options ]]
--- See `:help vim.o`
+-- Options are automatically loaded before lazy.nvim startup
+-- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
+-- Add any additional options here
 
--- vim.cmd("autocmd!")
+vim.g.mapleader = ";"
 
-vim.scriptencoding = 'utf-8'
-vim.opt.encoding = 'utf-8'
-vim.opt.fileencoding = 'utf-8'
+vim.scriptencoding = "utf-8"
+vim.opt.encoding = "utf-8"
+vim.opt.fileencoding = "utf-8"
 
 vim.wo.number = true
 vim.wo.relativenumber = true
@@ -17,7 +18,7 @@ vim.opt.showcmd = true
 vim.opt.cmdheight = 1
 vim.opt.laststatus = 2
 vim.opt.scrolloff = 20
-vim.opt.shell = 'zsh'
+vim.opt.shell = "zsh"
 
 vim.opt.autoindent = true
 vim.opt.smartindent = true
@@ -31,7 +32,6 @@ vim.opt.backup = false
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 vim.opt.undofile = true
 
-
 -- Case insensitive searching UNLESS /C or capital in search
 vim.o.ignorecase = true
 vim.o.smartcase = true
@@ -41,7 +41,7 @@ vim.o.pumheight = 10
 
 -- Decrease update time
 vim.o.updatetime = 250
-vim.wo.signcolumn = 'yes'
+vim.wo.signcolumn = "yes"
 
 -- No Wrap lines
 vim.opt.wrap = false
@@ -53,10 +53,9 @@ vim.g.loaded_netrwPlugin = 1
 -- Open Split on Right
 vim.opt.splitright = true
 
-
 -- Set completeopt to have a better completion experience
-vim.o.completeopt = 'menuone,noselect'
+vim.o.completeopt = "menuone,noselect"
 
 -- Finding files - Search down into subfolders
-vim.opt.path:append { '**' }
-vim.opt.wildignore:append { '*/node_modules/*' }
+vim.opt.path:append({ "**" })
+vim.opt.wildignore:append({ "*/node_modules/*" })
