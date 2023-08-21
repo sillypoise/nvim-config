@@ -59,3 +59,21 @@ vim.o.completeopt = "menuone,noselect"
 -- Finding files - Search down into subfolders
 vim.opt.path:append({ "**" })
 vim.opt.wildignore:append({ "*/node_modules/*" })
+
+-- Check for Linux OS
+if vim.fn.has("unix") then
+  -- Clipboard with rdm for Linux
+  vim.g.clipboard = {
+    name = "rdm",
+    copy = {
+      ["+"] = { "rdm", "copy" },
+      ["*"] = { "rdm", "copy" },
+    },
+    paste = {
+      ["+"] = { "rdm", "paste" },
+      ["*"] = { "rdm", "paste" },
+    },
+  }
+end
+
+-- You can add more conditions for other OSs if needed
