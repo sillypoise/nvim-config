@@ -1,5 +1,6 @@
 return {
   "epwalsh/obsidian.nvim",
+  enabled = false,
   version = "*", -- recommended, use latest release instead of latest commit
   lazy = true,
   ft = "markdown",
@@ -19,6 +20,13 @@ return {
       -- time_format = "%H:%M",
       -- A map for custom variables, the key should be the variable and the value a function
       substitutions = {},
+    },
+  },
+  keys = {
+    {
+      "<leader>oo",
+      "<cmd>ObsidianOpen<cr>",
+      desc = "Open Obsidian App",
     },
   },
 }

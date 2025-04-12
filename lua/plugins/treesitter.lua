@@ -7,6 +7,7 @@ return {
       "diff",
       "graphql",
       "hcl",
+      "hjson",
       "html",
       "javascript",
       "jsdoc",
